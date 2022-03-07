@@ -117,79 +117,70 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/navigation_menu.js":[function(require,module,exports) {
+var navigationMenuToggleButton = document.querySelector(".navigation_bar_menu_toggle_button");
+var navigationBarLogo = document.querySelector(".navigation_bar_logo");
+var menuToggle = false;
+navigationMenuToggleButton.addEventListener("click", function () {
+  console.log("lh"); // Check if menu is closed
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+  if (!menuToggle) {
+    console.log("lala"); // Disables scrolling on document body
 
-  return bundleURL;
-}
+    document.body.classList.add("noscroll"); // Animates navigation menu toggle button
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    navigationMenuToggleButton.classList.add("open"); // Shows Menu
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+    gsap.to(".navigation_menu_container", {
+      left: "0vw",
+      duration: 1,
+      ease: "expo.inOut"
+    }); // Fades Out Navigation Logo
 
-  return '/';
-}
+    gsap.to(navigationBarLogo, {
+      opacity: 0.5,
+      delay: 0.3,
+      ease: "expo.inOut"
+    }); // Displays Navigation Menu Content
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
+    gsap.to(".navigation_menu_content", {
+      display: "flex",
+      opacity: 1,
+      delay: 0.4,
+      duration: 0.7,
+      ease: "expo.inOut"
+    });
+  } else {
+    // Animates Navigation Menu Button
+    navigationMenuToggleButton.classList.remove("open"); // Enables scrolling on document body
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
+    document.body.classList.remove("noscroll"); // Hides Content
 
-function updateLink(link) {
-  var newLink = link.cloneNode();
+    gsap.to(".navigation_menu_content", {
+      display: "none",
+      opacity: 0,
+      duration: 0.7,
+      ease: "expo.inOut"
+    }); // Hides Menu
 
-  newLink.onload = function () {
-    link.remove();
-  };
+    gsap.to(".navigation_menu_container", {
+      left: "95vw",
+      delay: 0.2,
+      duration: 1,
+      ease: "expo.inOut"
+    }); // Fade In Navigation Bar Logo
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
+    gsap.to(navigationBarLogo, {
+      opacity: 1,
+      delay: 0.4,
+      ease: "expo.inOut"
+    });
+  } // Changes menu toggler
 
-var cssTimeout = null;
 
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/reset.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+  menuToggle = !menuToggle;
+});
+},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +384,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/reset.dc9ff4e8.js.map
+},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/navigation_menu.js"], null)
+//# sourceMappingURL=/navigation_menu.1286137c.js.map

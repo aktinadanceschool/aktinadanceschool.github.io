@@ -118,67 +118,100 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/index.js":[function(require,module,exports) {
-var navigationMenuToggleButton = document.querySelector(".navigation_bar_menu_toggle_button");
-var navigationBarLogo = document.querySelector(".navigation_bar_logo");
-var menuToggle = false;
-navigationMenuToggleButton.addEventListener("click", function () {
-  console.log("lh"); // Check if menu is closed
-
-  if (!menuToggle) {
-    console.log("lala"); // Disables scrolling on document body
-
-    document.body.classList.add("noscroll"); // Animates navigation menu toggle button
-
-    navigationMenuToggleButton.classList.add("open"); // Shows Menu
-
-    gsap.to(".navigation_menu_container", {
-      left: "0vw",
-      duration: 1,
-      ease: "expo.inOut"
-    }); // Fades Out Navigation Logo
-
-    gsap.to(navigationBarLogo, {
-      opacity: 0.5,
-      delay: 0.3,
-      ease: "expo.inOut"
-    }); // Displays Navigation Menu Content
-
-    gsap.to(".navigation_menu_content", {
-      display: "flex",
-      opacity: 1,
-      delay: 0.4,
+var aboutTitleTopText1 = document.querySelector(".text-top").children[0].children[0];
+var aboutTitleTopText2 = document.querySelector(".text-top").children[0].children[1];
+var aboutTitleBottomText = document.querySelector(".text-bottom").children[0];
+gsap.registerPlugin(ScrollTrigger);
+ScrollTrigger.defaults({
+  toggleActions: "play reverse restart reverse"
+});
+var tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#about_section",
+    start: '49% center',
+    end: '101% bottom'
+  }
+});
+tl.from(aboutTitleTopText1, {
+  y: "200%",
+  delay: 0.3,
+  duration: 0.7,
+  ease: "Power3.easeOut"
+});
+tl.from(aboutTitleTopText2, {
+  y: "100%",
+  duration: 0.5,
+  ease: "Power3.easeOut"
+});
+tl.from(aboutTitleBottomText, {
+  y: "-100%",
+  duration: 0.5,
+  ease: "Power3.easeOut"
+});
+var rightArrow = document.querySelector(".right_arrow_container");
+var aboutDetailsText1 = document.querySelector("#details_text_paragraph_1");
+var aboutDetailsText2 = document.querySelector("#details_text_paragraph_2");
+var detailsTextToggle = false;
+rightArrow.addEventListener("click", function () {
+  if (!detailsTextToggle) {
+    gsap.to(".details_text_upper_border", {
+      width: "25vw",
       duration: 0.7,
+      ease: "expo.inOut"
+    });
+    gsap.to(".details_text_right_border", {
+      height: "7vh",
+      duration: 0.7,
+      delay: 0.2,
+      ease: "expo.inOut"
+    });
+    gsap.to(aboutDetailsText1, {
+      opacity: 1,
+      x: -10,
+      display: "block",
+      duration: 1,
+      delay: 0.6,
+      ease: "expo.inOut"
+    });
+    gsap.to(aboutDetailsText2, {
+      opacity: 1,
+      x: -10,
+      display: "block",
+      duration: 1,
+      delay: 0.9,
       ease: "expo.inOut"
     });
   } else {
-    // Animates Navigation Menu Button
-    navigationMenuToggleButton.classList.remove("open"); // Enables scrolling on document body
-
-    document.body.classList.remove("noscroll"); // Hides Content
-
-    gsap.to(".navigation_menu_content", {
-      display: "none",
+    gsap.to(aboutDetailsText2, {
+      x: 10,
       opacity: 0,
-      duration: 0.7,
-      ease: "expo.inOut"
-    }); // Hides Menu
-
-    gsap.to(".navigation_menu_container", {
-      left: "95vw",
-      delay: 0.2,
+      display: "none",
       duration: 1,
       ease: "expo.inOut"
-    }); // Fade In Navigation Bar Logo
-
-    gsap.to(navigationBarLogo, {
-      opacity: 1,
-      delay: 0.4,
+    });
+    gsap.to(aboutDetailsText1, {
+      x: 10,
+      opacity: 0,
+      display: "none",
+      duration: 1,
+      delay: 0.3,
       ease: "expo.inOut"
     });
-  } // Changes menu toggler
+    gsap.to(".details_text_right_border", {
+      height: "0vh",
+      duration: 0.7,
+      delay: 0.6,
+      ease: "expo.inOut"
+    });
+    gsap.to(".details_text_upper_border", {
+      width: "0vw",
+      duration: 0.7,
+      delay: 1,
+      ease: "expo.inOut"
+    });
+  }
 
-
-  menuToggle = !menuToggle;
+  detailsTextToggle = !detailsTextToggle;
 });
 },{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
@@ -208,7 +241,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51338" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56273" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
