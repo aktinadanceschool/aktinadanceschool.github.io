@@ -4767,7 +4767,7 @@ var initPhotoSwipeFromDOM = function initPhotoSwipeFromDOM(gallerySelector) {
 };
 
 initPhotoSwipeFromDOM('.aktina_gallery');
-},{"photoswipe":"node_modules/photoswipe/dist/photoswipe.js","../node_modules/photoswipe/dist/photoswipe-ui-default":"node_modules/photoswipe/dist/photoswipe-ui-default.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"photoswipe":"node_modules/photoswipe/dist/photoswipe.js","../node_modules/photoswipe/dist/photoswipe-ui-default":"node_modules/photoswipe/dist/photoswipe-ui-default.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -4795,7 +4795,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64258" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -4971,5 +4971,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/gallery.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js","js/gallery.js"], null)
 //# sourceMappingURL=/gallery.9b558bfc.js.map

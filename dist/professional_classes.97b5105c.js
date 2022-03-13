@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/professional_classes.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/professional_classes.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/professional_classes.png":[["professional_classes.c9cf8ea3.png","img/professional_classes.png"],"img/professional_classes.png"],"./../img/background.png":[["background.59c06501.png","img/background.png"],"img/background.png"],"./../img/people/betty_dramisioti.jpeg":[["betty_dramisioti.9e5616a4.jpeg","img/people/betty_dramisioti.jpeg"],"img/people/betty_dramisioti.jpeg"],"./../img/people/mpaka.jpeg":[["mpaka.1a8f8525.jpeg","img/people/mpaka.jpeg"],"img/people/mpaka.jpeg"],"./../img/people/rouka.jpeg":[["rouka.a80672fa.jpeg","img/people/rouka.jpeg"],"img/people/rouka.jpeg"],"./../img/people/topalidou.jpeg":[["topalidou.d4fc2b96.jpeg","img/people/topalidou.jpeg"],"img/people/topalidou.jpeg"],"./../img/people/korfia.jpeg":[["korfia.6a60e087.jpeg","img/people/korfia.jpeg"],"img/people/korfia.jpeg"],"./../img/people/stellatou.jpeg":[["stellatou.87363f96.jpeg","img/people/stellatou.jpeg"],"img/people/stellatou.jpeg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../img/professional_classes.png":[["professional_classes.c9cf8ea3.png","img/professional_classes.png"],"img/professional_classes.png"],"./../img/background.png":[["background.59c06501.png","img/background.png"],"img/background.png"],"./../img/people/betty_dramisioti.jpeg":[["betty_dramisioti.9e5616a4.jpeg","img/people/betty_dramisioti.jpeg"],"img/people/betty_dramisioti.jpeg"],"./../img/people/mpaka.jpeg":[["mpaka.1a8f8525.jpeg","img/people/mpaka.jpeg"],"img/people/mpaka.jpeg"],"./../img/people/rouka.jpeg":[["rouka.a80672fa.jpeg","img/people/rouka.jpeg"],"img/people/rouka.jpeg"],"./../img/people/topalidou.jpeg":[["topalidou.d4fc2b96.jpeg","img/people/topalidou.jpeg"],"img/people/topalidou.jpeg"],"./../img/people/korfia.jpeg":[["korfia.6a60e087.jpeg","img/people/korfia.jpeg"],"img/people/korfia.jpeg"],"./../img/people/stellatou.jpeg":[["stellatou.87363f96.jpeg","img/people/stellatou.jpeg"],"img/people/stellatou.jpeg"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64258" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/professional_classes.97b5105c.js.map

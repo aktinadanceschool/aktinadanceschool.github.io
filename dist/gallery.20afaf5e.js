@@ -117,7 +117,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -149,7 +149,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+},{}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -184,12 +184,12 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/gallery.css":[function(require,module,exports) {
+},{"./bundle-url":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"css/gallery.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../img/background.png":[["background.59c06501.png","img/background.png"],"img/background.png"],"./../img/gallery/1-1.jpeg":[["1-1.90bf8cad.jpeg","img/gallery/1-1.jpeg"],"img/gallery/1-1.jpeg"],"./../img/gallery/1-2.jpeg":[["1-2.34207ada.jpeg","img/gallery/1-2.jpeg"],"img/gallery/1-2.jpeg"],"./../img/gallery/1-3.jpeg":[["1-3.b765ac55.jpeg","img/gallery/1-3.jpeg"],"img/gallery/1-3.jpeg"],"./../img/gallery/1-4.jpeg":[["1-4.d6eeffdf.jpeg","img/gallery/1-4.jpeg"],"img/gallery/1-4.jpeg"],"./../img/gallery/1-5.jpeg":[["1-5.1293f450.jpeg","img/gallery/1-5.jpeg"],"img/gallery/1-5.jpeg"],"./../img/gallery/1-6.jpeg":[["1-6.e3b63ed1.jpeg","img/gallery/1-6.jpeg"],"img/gallery/1-6.jpeg"],"./../img/gallery/1-7.jpeg":[["1-7.41bc37f0.jpeg","img/gallery/1-7.jpeg"],"img/gallery/1-7.jpeg"],"./../img/gallery/1-8.jpeg":[["1-8.98cc35b3.jpeg","img/gallery/1-8.jpeg"],"img/gallery/1-8.jpeg"],"./../img/gallery/1-9.jpeg":[["1-9.77776891.jpeg","img/gallery/1-9.jpeg"],"img/gallery/1-9.jpeg"],"./../img/gallery/1-10.jpeg":[["1-10.2af19ddf.jpeg","img/gallery/1-10.jpeg"],"img/gallery/1-10.jpeg"],"./../img/gallery/1-11.jpeg":[["1-11.8f8d8a5e.jpeg","img/gallery/1-11.jpeg"],"img/gallery/1-11.jpeg"],"./../img/gallery/1-12.jpeg":[["1-12.cc627ec3.jpeg","img/gallery/1-12.jpeg"],"img/gallery/1-12.jpeg"],"_css_loader":"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../img/background.png":[["background.59c06501.png","img/background.png"],"img/background.png"],"./../img/gallery/1-1.jpeg":[["1-1.90bf8cad.jpeg","img/gallery/1-1.jpeg"],"img/gallery/1-1.jpeg"],"./../img/gallery/1-2.jpeg":[["1-2.34207ada.jpeg","img/gallery/1-2.jpeg"],"img/gallery/1-2.jpeg"],"./../img/gallery/1-3.jpeg":[["1-3.b765ac55.jpeg","img/gallery/1-3.jpeg"],"img/gallery/1-3.jpeg"],"./../img/gallery/1-4.jpeg":[["1-4.d6eeffdf.jpeg","img/gallery/1-4.jpeg"],"img/gallery/1-4.jpeg"],"./../img/gallery/1-5.jpeg":[["1-5.1293f450.jpeg","img/gallery/1-5.jpeg"],"img/gallery/1-5.jpeg"],"./../img/gallery/1-6.jpeg":[["1-6.e3b63ed1.jpeg","img/gallery/1-6.jpeg"],"img/gallery/1-6.jpeg"],"./../img/gallery/1-7.jpeg":[["1-7.41bc37f0.jpeg","img/gallery/1-7.jpeg"],"img/gallery/1-7.jpeg"],"./../img/gallery/1-8.jpeg":[["1-8.98cc35b3.jpeg","img/gallery/1-8.jpeg"],"img/gallery/1-8.jpeg"],"./../img/gallery/1-9.jpeg":[["1-9.77776891.jpeg","img/gallery/1-9.jpeg"],"img/gallery/1-9.jpeg"],"./../img/gallery/1-10.jpeg":[["1-10.2af19ddf.jpeg","img/gallery/1-10.jpeg"],"img/gallery/1-10.jpeg"],"./../img/gallery/1-11.jpeg":[["1-11.8f8d8a5e.jpeg","img/gallery/1-11.jpeg"],"img/gallery/1-11.jpeg"],"./../img/gallery/1-12.jpeg":[["1-12.cc627ec3.jpeg","img/gallery/1-12.jpeg"],"img/gallery/1-12.jpeg"],"_css_loader":"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63143" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64258" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -393,5 +393,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
+},{}]},{},["../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
 //# sourceMappingURL=/gallery.20afaf5e.js.map
