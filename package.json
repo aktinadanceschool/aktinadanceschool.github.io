@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "p": "^0.2.0",
+    "photo": "^0.2.13",
+    "photoswipe": "^4.1.3"
+  }
+}

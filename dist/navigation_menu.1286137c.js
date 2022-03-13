@@ -121,11 +121,11 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 var navigationMenuToggleButton = document.querySelector(".navigation_bar_menu_toggle_button");
 var navigationBarLogo = document.querySelector(".navigation_bar_logo");
 var menuToggle = false;
+var navigatinMenuLeftAttribute = window.getComputedStyle(document.querySelector(".navigation_menu_container")).getPropertyValue("left");
 navigationMenuToggleButton.addEventListener("click", function () {
-  console.log("lh"); // Check if menu is closed
-
+  // Check if menu is closed
   if (!menuToggle) {
-    console.log("lala"); // Disables scrolling on document body
+    navigatinMenuLeftAttribute = window.getComputedStyle(document.querySelector(".navigation_menu_container")).getPropertyValue("left"); // Disables scrolling on document body
 
     document.body.classList.add("noscroll"); // Animates navigation menu toggle button
 
@@ -164,7 +164,7 @@ navigationMenuToggleButton.addEventListener("click", function () {
     }); // Hides Menu
 
     gsap.to(".navigation_menu_container", {
-      left: "95vw",
+      left: navigatinMenuLeftAttribute,
       delay: 0.2,
       duration: 1,
       ease: "expo.inOut"
@@ -208,7 +208,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56273" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63143" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

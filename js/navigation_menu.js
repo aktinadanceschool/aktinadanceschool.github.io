@@ -2,11 +2,15 @@ const navigationMenuToggleButton = document.querySelector(".navigation_bar_menu_
 const navigationBarLogo = document.querySelector(".navigation_bar_logo");
 let menuToggle = false;
 
+let navigatinMenuLeftAttribute = window.getComputedStyle(document.querySelector(".navigation_menu_container")).getPropertyValue("left");
+
 navigationMenuToggleButton.addEventListener("click", () => {
-    console.log("lh")
+   
     // Check if menu is closed
     if(!menuToggle) {
-        console.log("lala")
+
+        navigatinMenuLeftAttribute = window.getComputedStyle(document.querySelector(".navigation_menu_container")).getPropertyValue("left");
+        
         // Disables scrolling on document body
         document.body.classList.add("noscroll");
 
@@ -54,7 +58,7 @@ navigationMenuToggleButton.addEventListener("click", () => {
 
         // Hides Menu
         gsap.to(".navigation_menu_container", {
-            left: "95vw",
+            left: navigatinMenuLeftAttribute,
             delay: 0.2,
             duration: 1,
             ease: "expo.inOut"

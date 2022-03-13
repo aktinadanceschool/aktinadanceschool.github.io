@@ -11,8 +11,8 @@ ScrollTrigger.defaults({
 let tl = gsap.timeline({
     scrollTrigger: {
         trigger: "#about_section",
-        start: '49% center',
-        end: '101% bottom',
+        start: '35% center',
+        end: '115% bottom',
     }
 });
 
@@ -110,3 +110,33 @@ rightArrow.addEventListener("click", () => {
     detailsTextToggle = !detailsTextToggle;
 
 });
+
+var splide = new Splide( '.splide', {
+    type: 'fade',
+    rewind: true,
+    speed: 2000,
+    autoplay: true,
+    interval: 4000,
+});
+
+splide.mount();
+
+let tl1 = gsap.timeline({
+    scrollTrigger: {
+        trigger: "#slideshow_section",
+        start: '40% center',
+        end: '115% bottom',
+    }
+});
+
+const carouselCaptionHRs = document.querySelectorAll(".carousel-caption");
+let captionWidth = window.getComputedStyle(document.querySelector(".carousel-caption")).getPropertyValue("width");
+
+for(let carouselCaptionHR of carouselCaptionHRs) {
+    tl1.to(carouselCaptionHR.children[1], {
+        width: captionWidth,
+        delay: 0.3,
+        duration: 0.7,
+        ease: "Power3.easeOut"
+    });
+}

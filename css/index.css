@@ -22,12 +22,12 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 20vw;
+    width: 200px;
     height: 2vh;
 }
 
 .scroll_message_container hr {
-    width: 5vw;
+    width: 50px;
 }
 
 .scroll_message_container span {
@@ -37,11 +37,11 @@
 /* About Section Title */
 
 .animated-title {
-    width: 25vw;
+    width: 340px;
     height: 42vh;
     position: absolute;
-    top: 53%;
-    left: 13%;
+    top: 53vh;
+    right: 64%;
     font-weight: 300;
 }
 
@@ -154,4 +154,439 @@
     opacity: 0;
     font-size: 1.2rem;
     text-align: right;
+}
+
+/* Slideshow Section */
+
+.splide {
+    width: 100vw;
+    height: 100vh;
+}
+
+.splide__slide {
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.splide__slide:nth-child(1)  {
+    background-image: url("../img/slideshow/shlideshow-1.jpeg");
+}
+
+.splide__slide:nth-child(2)  {
+    background-image: url("../img/slideshow/shlideshow-2.jpeg");
+}
+
+.splide__slide:nth-child(3)  {
+    background-image: url("../img/slideshow/shlideshow-3.jpeg");
+}
+
+.splide__slide:nth-child(4)  {
+    background-image: url("../img/slideshow/shlideshow-4.jpeg");
+}
+
+.splide__arrow--next {
+    position: absolute;
+    left: 92vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.splide__arrow--prev {
+    position: absolute;
+    left: 3vw;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.splide__arrow {
+    background-color: transparent;
+    color: white;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px
+}
+
+.navigation_button_text {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    font-size: 0.8rem;
+}
+
+.vertical_line {
+    border: 1px solid white;
+    height: 60px;
+    width: 0;
+}
+
+.splide__pagination__page {
+    width: 15px;
+    height: 15px;
+    background-color: transparent;
+    border: 2px solid #c96b2c;
+    opacity: 1;
+}
+
+.splide__pagination__page.is-active {
+    background-color: #c96b2c;
+    width: 12px;
+    height: 12px;
+    border: none;
+
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 63vh;
+    left: 13vw;
+    width: 330px;
+}
+
+.slideshow_caption_header {
+    text-align: justify;
+    padding-bottom: 1vh;
+    color: #c96b2c;
+    font-size: 2rem;
+    font-family: 'Hubballi', cursive;
+}
+
+.carousel-caption hr {
+    width: 0;
+}
+
+.slideshow_caption_details {
+    text-align: justify;
+}
+
+/* Contact Section */
+
+#contact_section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 8vw;
+    padding-right: 8vw;
+}
+
+.contact_infos {
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+}
+
+.contact_form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 4vh;
+    padding-top: 2vh;
+}
+
+input[type="text"] {
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    padding: 1vh;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+input[type="text"]::placeholder {
+    color: #c96b2c;
+    font-size: 1.3rem;
+}
+
+textarea {
+    outline:none;
+    background: transparent;
+    height: auto;
+    height: 19vh;
+    border: 1px solid white;
+    overflow-wrap: break-word;
+    resize: none;
+    color: white;
+    font-size: 1.3rem;
+    padding: 1vh;
+}
+
+textarea::placeholder {
+    color: #c96b2c;
+    font-size: 1.3rem;
+}
+
+input[type="submit"] {
+    background-color: #c96b2c;
+    color: white;
+    width: 80px;
+    height: 40px;
+    border: none;
+    font-size: 1.1rem;
+    border-radius: 7%;
+    align-self: flex-end;
+}
+
+.label {
+    color: #c96b2c;
+    font-size: 0.9rem;
+}
+
+.value {
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.contact_title {
+    color: #c96b2c;
+    font-size: 1.3rem;
+}
+
+.map_instance {
+    width: 32vw;
+    height:35vh;
+}
+
+#comment {
+    margin-top: 2vh;
+}
+
+#submit_btn {
+    margin-top: 2vh;
+}
+
+@media only screen and (max-width: 1042px) {
+    .animated-title {
+        width: 250px;
+    }
+
+    .animated-title > div > div > span {
+        font-size: 2rem;
+        line-height: 1.8;
+    }
+    
+    .animated-title > div div {
+        font-size: 3.7rem;
+        padding: 2vmin 0;
+    }
+    .right_arrow_container {
+        width: 20px;
+        height: 20px;
+    }
+    .right_arrow_container i {
+       font-size: 0.6rem;
+    }
+    .details_text div:nth-child(1) {
+        font-size: 1rem;
+    }
+    
+    .details_text div:nth-child(2) {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 790px) {
+    .animated-title {
+        width: 190px;
+    }
+
+    .animated-title > div > div > span {
+        font-size: 1.5rem;
+        line-height: 1.8;
+    }
+    
+    .animated-title > div div {
+        font-size: 2.8rem;
+        padding: 2vmin 0;
+    }
+    .right_arrow_container {
+        width: 10px;
+        height: 10px;
+    }
+    .right_arrow_container i {
+       font-size: 0.4rem;
+    }
+    .details_text div:nth-child(1) {
+        font-size: 0.9rem;
+    }
+    
+    .details_text div:nth-child(2) {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .animated-title {
+        width: 300px;
+        height: 42vh;
+        position: absolute;
+        top: 40px;
+        left: 45%;
+        transform: translateX(-50%);
+    }
+
+    .animated-title > div > div > span {
+        font-size: 2.3rem;
+        line-height: 1.6;
+    }
+    
+    .animated-title > div div {
+        font-size: 4rem;
+        padding: 2vmin 0;
+    }
+
+    .right_arrow_container {
+        top: 235px;
+        left: 63%;
+        width: 25px;
+        height: 25px;
+    }
+    .right_arrow_container i {
+       font-size: 0.8rem;
+    }
+
+    .details_text_upper_border {
+        left: 50vw;
+        top: 350px;
+    }
+
+    .details_text_right_border {
+        left: 75vw;
+        top: 350px;
+    }
+
+    .details_text {
+        width: 350px;
+        left: 45%;
+        transform: translateX(-50%);
+        top: 370px;
+        line-height: 1.5;        
+    }
+
+    .details_text div:nth-child(1) {
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+
+    .details_text div:nth-child(2) {
+        font-size: 1.2rem;
+        text-align: justify;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .animated-title {
+        width: 300px;
+        height: 42vh;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .animated-title > div > div > span {
+        font-size: 2.3rem;
+        line-height: 1.6;
+    }
+    
+    .animated-title > div div {
+        font-size: 4rem;
+        padding: 2vmin 0;
+    }
+
+    .right_arrow_container {
+        top: 212px;
+        left: 80%;
+        width: 25px;
+        height: 25px;
+    }
+    .right_arrow_container i {
+       font-size: 0.8rem;
+    }
+
+    .details_text_upper_border {
+        left: 68vw;
+        top: 280px;
+    }
+
+    .details_text_right_border {
+        left: 93vw;
+        top: 280px;
+    }
+
+    .details_text {
+        width: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 300px;
+        line-height: 1.5;        
+    }
+
+    .details_text div:nth-child(1) {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+
+    .details_text div:nth-child(2) {
+        font-size: 0.8rem;
+        text-align: justify;
+    }
+    .splide__slide:nth-child(2) {
+        background-position-x: 75%;
+    }
+    .splide__slide:nth-child(3) {
+        background-position-x: 75%;
+    }
+    .splide__slide:nth-child(4) {
+        background-position-x: 70%;
+    }
+
+    .carousel-caption {
+        width: 290px;
+        top: 60%;
+    }
+    
+    .slideshow_caption_header {
+        font-size: 2rem;
+    }
+    
+    .carousel-caption hr {
+        width: 0;
+    }
+    
+    .slideshow_caption_details {
+        text-align: justify;
+        font-size: 0.9rem;
+    }
+
+    #contact_section {
+        padding-top: 70px;
+        padding-left: 34px;
+        padding-right: 0;
+    }
+    
+    .contact_form {
+        width: 320px;
+        padding-top: 2vh;
+        padding-bottom: 20px;
+        padding-right: 34px;
+    }
+    .map_instance {
+        width: 330px;
+        height:auto;
+        padding-right: 34px;
+    }
+
+    .label {
+        font-size: 0.8rem;
+    }
+
+    .value {
+        font-size: 1rem;
+    }
 }
