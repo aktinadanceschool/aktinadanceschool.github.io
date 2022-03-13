@@ -1,5 +1,5 @@
 // import PhotoSwipe from "photoswipe";
-// import PhotoSwipeUI_Default from "../node_modules/photoswipe/dist/photoswipe-ui-default";
+import PhotoSwipeUI_Default from "../node_modules/photoswipe/dist/photoswipe-ui-default";
 
 const gallery = document.querySelector(".aktina_gallery");
 
